@@ -1,0 +1,8 @@
+- name: Install Tomcat
+  hosts: webservers
+  become: true
+  vars:
+    - TOMCAT9_URL: "https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.72/bin/apache-tomcat-9.0.72.tar.gz" 
+      
+  roles:
+    - role: tomcat_installation_role
